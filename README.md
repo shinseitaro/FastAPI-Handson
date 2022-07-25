@@ -4,12 +4,18 @@
 
 ## 事前準備
 
-1. Python 3.6-3.9 のいずれかのバージョンをインストール
-1. このレポジトリを git clone して、仮想環境構築
+1. Python 3.6-3.9 のいずれかのバージョンをインストールして下さい
+1. このレポジトリを `git clone` して、仮想環境構築をお願いします
 
-### Windows 
+### 仮想環境構築 
 
-1. このレポジトリを git clone もしくは download
+- 仮想環境構築に慣れているかたは、ご自身のやりかたで全然構いません
+- 慣れていない方は、以下の方法でお願いします。
+- 質問などありましたら、slack などでお声がけ下さい。
+
+#### Windows 
+
+1. このレポジトリを `git clone` もしくは download
     ```bash
     git clone git@github.com:shinseitaro/FastAPI-Handson.git
     ```
@@ -41,7 +47,7 @@
     where python
     ```
     
-### Mac / Linux 
+#### Mac / Linux 
 1. このレポジトリを git clone もしくは download
     ```bash
     git clone git@github.com:shinseitaro/FastAPI-Handson.git
