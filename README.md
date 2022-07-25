@@ -4,7 +4,8 @@
 
 ## 事前準備
 
-このレポジトリを git clone して、仮想環境構築をお願いします。
+1. Python 3.6-3.9 のいずれかのバージョンをインストール
+1. このレポジトリを git clone して、仮想環境構築
 
 ### Windows 
 
@@ -19,21 +20,24 @@
     ```
 1.  仮想環境構築
     ```bash
-    # 現在有効な python を確認。Windowsの場合は一行目に表示されるPythonが現在有効なPython
+    # 現在有効な python を確認。
+    # 一行目に表示されるPythonが現在有効なPython
     where python
 
     # python のバージョン確認。Python 3.6 ~ 3.9 であることを確認。
-    # 今回3.10はハンズオンでは対応していません。
     python --version 
 
     # 仮想環境構築
     python -m venv .venv
 
     # アクティベート
-    .venv\Scripts\activate # 環境によっては、バックスラッシュではなく￥マークのことも有ります        
+    # 環境によっては、バックスラッシュではなく￥マークのことも有ります        
+    .venv\Scripts\activate 
     
 
-    # 仮想環境にはいったことを確認。最初に where python した時のパスではなく、プロジェクトディレクトリ配下の仮想環境内にあるPythonが一行目に表示されていればOK
+    # 仮想環境にはいったことを確認。
+    # 最初に where python した時のパスではなく、
+    # FastAPI-Handson配下の仮想環境内にあるPythonが一行目に表示されていればOK
     where python
     ```
     
@@ -52,7 +56,7 @@
     # 現在有効な python を確認。
     which python
 
-    # python のバージョン確認。Python 3.6 ~ 3.9 であることを確認。今回3.10はハンズオンでは対応していません。
+    # Python 3.6 ~ 3.9 であることを確認。
     python --version 
 
     # 仮想環境構築 
@@ -61,6 +65,7 @@
     # アクティベート
     source .venv/bin/activate
 
-    # 仮想環境にはいったことを確認. 最初に which python した時のパスではなく、プロジェクトディレクトリ配下の仮想環境内にあるPythonが表示されていればOK
+    # 仮想環境にはいったことを確認. 最初に which python した時のパスではなく、
+    # FastAPI-Handson配下の仮想環境内にあるPythonが表示されていればOK
     which python
     ```
