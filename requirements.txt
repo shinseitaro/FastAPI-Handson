@@ -1,0 +1,9 @@
+fastapi
+fastapi-versioning
+uvicorn
+SQLAlchemy
+jupyter
+isort 
+black 
+flake8
+blackcellmagic
