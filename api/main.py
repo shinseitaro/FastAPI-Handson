@@ -43,7 +43,7 @@ def get_all_status(db: Session = Depends(get_db)):
     return crud.select_all_status(db=db)
 
 
-@app.get("/status/{code}", response_model=List[schemas.Status])
+@app.get("/status/{code}", response_model=schemas.Status)
 def get_status_by_code(code: int, db: Session = Depends(get_db)):
     return crud.select_status_by_code(code=code, db=db)
 

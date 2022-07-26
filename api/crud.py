@@ -59,7 +59,7 @@ def select_all_status(db: Session):
 
 
 def select_status_by_code(code: int, db: Session):
-    status = db.query(models.StatusCode).filter(models.StatusCode.code == code)
+    status = db.query(models.StatusCode).filter(models.StatusCode.code == code).first()
     return status
 
 
