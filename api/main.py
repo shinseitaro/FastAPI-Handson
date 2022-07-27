@@ -1,3 +1,4 @@
+import csv
 from typing import List
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -16,6 +17,33 @@ def get_db():
         yield db
     finally:
         db.close()
+
+@app.on_event("startup")
+def startup_event():
+    status_data_file = "./data/statuscode.csv"
+    cat_data_file = "./data/cat.csv"
+    db = Session(engine)
+    # dataが入っているかどうか確認
+    status_result = db.execute(db.query(models.StatusCode)).first()
+    cat_result = db.execute(db.query(models.Cat)).first()
+
+    if not status_result:
+        with open(status_data_file) as f:
+            reader = csv.DictReader(f)
+            data = list(reader)
+            for d in data:
+                db.add(models.StatusCode(**d))
+            db.commit()
+
+    if not cat_result:
+        with open(cat_data_file) as f:
+            reader = csv.DictReader(f)
+            data = list(reader)
+            for d in data:
+                db.add(models.Cat(**d))
+            db.commit()
+
+    db.close()
 
 
 @app.post("/cat")

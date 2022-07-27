@@ -29,7 +29,7 @@ class BaseStatus(BaseModel):
 
 class CreateStatus(BaseStatus):
     code: int
-    pass
+    
 
 
 class PutStatus(BaseStatus):
