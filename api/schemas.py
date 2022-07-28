@@ -23,20 +23,19 @@ class Cat(BaseCat):
         orm_mode = True
 
 
-class BaseStatus(BaseModel):
+class BaseStatusCode(BaseModel):
     message: str
 
 
-class CreateStatus(BaseStatus):
+class CreateStatusCode(BaseStatusCode):
     code: int
-    
 
 
-class PutStatus(BaseStatus):
+class PutStatusCode(BaseStatusCode):
     pass
 
 
-class Status(BaseStatus):
+class StatusCode(BaseStatusCode):
     id: int
     code: int
     cats: List[Cat] = []

@@ -30,6 +30,8 @@
         ```bash
         uvicorn main:app --reload
         ```
+        - uvicorn : 非同期対応の Python Web サーバー、フレームワーク、およびアプリケーション間の標準インターフェースを提供
+        
     - その2 デバッグ - FastAPI - https://fastapi.tiangolo.com/ja/tutorial/debugging/#_1
         ```python
         if __name__ == "__main__":

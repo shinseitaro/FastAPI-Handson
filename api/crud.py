@@ -1,4 +1,3 @@
-import re
 from sqlalchemy.orm import Session
 from . import models, schemas
 
@@ -8,6 +7,7 @@ cats
 
 
 def select_cats(db: Session):
+    # SELECT * FROM cats
     cats = db.query(models.Cat).all()
     return cats
 
@@ -29,9 +29,6 @@ def update_id_cat(id: int, request: schemas.PutCat, db: Session):
     # .get() は Cat オブジェクト
     cat = db.query(models.Cat).get(id)
 
-    # .filter() だと Query オブジェクト
-    # cat = db.query(models.Cat).filter(models.Cat.id == id)
-    # Query オブジェクトは update メソッドを持つので get ではなく filter を使う
     cat.filepath = request.filepath
     cat.message = request.message
     cat.code = request.code
@@ -63,7 +60,7 @@ def select_status_by_code(code: int, db: Session):
     return status
 
 
-def insert_status(request: schemas.CreateStatus, db: Session):
+def insert_status(request: schemas.CreateStatusCode, db: Session):
     new_status = models.StatusCode(**request.dict())
     db.add(new_status)
     db.commit()
@@ -71,7 +68,7 @@ def insert_status(request: schemas.CreateStatus, db: Session):
     return new_status
 
 
-def update_code_status(code: int, request: schemas.PutStatus, db: Session):
+def update_code_status(code: int, request: schemas.PutStatusCode, db: Session):
     status = db.query(models.StatusCode).filter(models.StatusCode.code == code).first()
     status.message = request.message
     db.commit()
