@@ -11,10 +11,9 @@ class StatusCode(Base):
     message = Column(String)
 
     # Cat クラスの statuscode プロパティに関連付けることによって、
-    # この属性(cats) Cat のデータに StatusCode データオブジェクトからアクセス出来る
-    # 例えば、 a_status という StatusCodeクラスのオブジェクトがあったとしたら、
-    # a_status.cats で、Cat 側が 外部キー(statuscodes.code) で紐づけているデータにアクセス出来る
-
+    # StatusCode データオブジェクトを作った時に、
+    # cats 属性を通じて、紐付いているCat のデータにアクセス出来る
+    # 例えば、 status404.cats で、Cat 側が 外部キー(statuscodes.code) で紐づけているデータにアクセス出来る
     cats = relationship("Cat", back_populates="statuscode")
 
 
