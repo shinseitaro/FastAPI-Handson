@@ -130,6 +130,9 @@ dmypy.json
 .venv/
 .vscode/
 
+.github
+*.db
+
 # clojurescript
 democat/*
 !democat/clojurescript/
@@ -143,4 +146,8 @@ democat/clojurescript/source/resources
 !democat/static/cljs/dev/*
 democat/static/cljs/prod/
 !democat/static/index.html
+
+.clj-kondo/
+.lsp
+
 
