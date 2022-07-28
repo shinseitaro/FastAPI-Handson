@@ -9,7 +9,8 @@ from .database import SessionLocal, engine
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
-
+from fastapi.staticfiles import StaticFiles
+app.mount("/static", StaticFiles(directory="./democat/static", html=True), name="static")
 
 def get_db():
     db = SessionLocal()

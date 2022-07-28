@@ -129,3 +129,18 @@ dmypy.json
 .pyre/
 .venv/
 .vscode/
+
+# clojurescript
+democat/*
+!democat/clojurescript/
+!democat/clojurescript/source/*
+democat/clojurescript/source/resources
+!democat/clojurescript/project.clj
+
+
+!democat/static/
+!democat/static/cljs/
+!democat/static/cljs/dev/*
+democat/static/cljs/prod/
+!democat/static/index.html
+
