@@ -13,15 +13,7 @@
 (def site "")
 
 (def status-codes (rc/atom []))
-;[{"message":"Continue","id":1,"code":100,"cats":[{"filepath":"https://2.bp.blogspot.com/-W4-TS_tujt8/WaPvTCc-G1I/AAAAAAABGLs/-u_D74cW_MMNxfRngJONvSflNpnD_mlawCLcBGAs/s800/baby_cat_dog.png","message":"どうぞどうぞ","code":100,"id":1}]},
-; {"message":"OK","id":2,"code":200,"cats":[{"filepath":"https://4.bp.blogspot.com/-nqAiMJY_8OQ/W3abvWkjINI/AAAAAAABOD8/dLuBxykrp5Uw5vYFVZ8Uip3pe-v_oG1HwCLcBGAs/s800/sleep_animal_cat.png","message":"しごとがんばってー。わしゃ寝るわ","code":200,"id":2}]},
-; {"message":"Bad Request","id":3,"code":400,"cats":[{"filepath":"https://1.bp.blogspot.com/-njolokREng0/W3abEWJwlPI/AAAAAAABN-M/TPeZ51tb7tAVe4Gk_e3Nw_oUVvGiGNlHgCLcBGAs/s800/cat2_2_surprise.png","message":"ふぅわっつ？","code":400,"id":4}]},
-; {"message":"Not Found","id":4,"code":404,"cats":[{"filepath":"https://1.bp.blogspot.com/-d2MVqvUmxM0/V4SBCnW0-_I/AAAAAAAA8Qk/PZx69vFKAVgiAAOZzbeBWQC2erUmRdKoACLcB/s800/pet_tehe_cat.png","message":"てへぺろ","code":404,"id":5}]}]
-
 (def image-list (rc/atom []))
-; {"message":"OK","id":2,"code":200,
-;   "cats":[{"filepath":"https://1.bp.blogspot.com/-rd13c_PYCHc/XexqupELsMI/AAAAAAABWiY/xPZ4z_kh9Wo5plD3VNp1PqRe66RbBX1IgCNcBGAsYHQ/s180-c/kotowaza_neko_koban.png","message":"やったね","code":200,"id":3},
-;           {"filepath":"https://1.bp.blogspot.com/-XiHMwq1qI74/XYhOX1hmXBI/AAAAAAABVHc/4BLGp1ydpyspbCIToEB5AKFIfwNogJ19wCNcBGAsYHQ/s180-c/pet_darui_cat.png","message":"ごろごろ","code":200,"id":4}]}
 
 (defn render
   "HTMLの`tag`で指定されたところに`content`を描画する"
@@ -132,7 +124,7 @@
 
 (defn main
   []
-  (js/setInterval update-status (* 5000 1))
+  ;; (js/setInterval update-status (* 5000 1))
   (render [:div {:id "cljs-app-content" :class "flex flex-col min-h-screen"}
            (header "HTTP Cat Clone with FastAPI")
            [content]
