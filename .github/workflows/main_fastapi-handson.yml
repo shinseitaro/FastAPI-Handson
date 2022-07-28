@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'FastAPI-Handson'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_758093E555C94B0997D5314D4D4D2429 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_845490B1F1BD4E678BE32DE7EC798B29 }}
