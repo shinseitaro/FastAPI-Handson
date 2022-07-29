@@ -28,7 +28,7 @@ def post_cat(request: schemas.CreateCat, db: Session = Depends(get_db)):
     return crud.insert_cat(request=request, db=db)
 
 
-@app.get("/cat")
+@app.get("/cat", response_model=List[schemas.Cat])
 def get_cats(db: Session = Depends(get_db)):
     return crud.select_cats(db=db)
 
@@ -104,5 +104,5 @@ def startup_event():
 
 
 app.mount(
-    "/", StaticFiles(directory="./democat/static", html=True), name=""
+    "/static", StaticFiles(directory="./democat/static", html=True), name="static"
 )

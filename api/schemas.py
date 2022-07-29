@@ -1,9 +1,9 @@
 from typing import List
-from pydantic import BaseModel
+from pydantic import BaseModel, HttpUrl
 
 
 class BaseCat(BaseModel):
-    filepath: str
+    filepath: HttpUrl
     message: str
     code: int
 
@@ -25,10 +25,11 @@ class Cat(BaseCat):
 
 class BaseStatusCode(BaseModel):
     message: str
+    code: int
 
 
 class CreateStatusCode(BaseStatusCode):
-    code: int
+    pass
 
 
 class PutStatusCode(BaseStatusCode):
@@ -37,7 +38,6 @@ class PutStatusCode(BaseStatusCode):
 
 class StatusCode(BaseStatusCode):
     id: int
-    code: int
     cats: List[Cat] = []
 
     class Config:
