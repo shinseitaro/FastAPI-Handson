@@ -104,5 +104,5 @@ def startup_event():
 
 
 app.mount(
-    "/static", StaticFiles(directory="./democat/static", html=True), name="static"
+    "/", StaticFiles(directory="./democat/static", html=True), name=""
 )

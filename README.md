@@ -2,76 +2,28 @@
 
 この資料は [PyLadies Tokyo Meetup #72 オンライン FastAPI ハンズオン - connpass](https://pyladies-tokyo.connpass.com/event/254107/) のハンズオン資料です
 
-## 事前準備
+## ハンズオン事前準備
 
-1. Python 3.6-3.9 のいずれかのバージョンをインストールして下さい
-1. このレポジトリを `git clone` して、仮想環境構築をお願いします
+- [ハンズオン環境構築 ](environment.md) を参照
 
-### 仮想環境構築 
+## デプロイ
 
-- 仮想環境構築に慣れているかたは、ご自身のやりかたで全然構いません
-- 慣れていない方は、以下の方法でお願いします。
-- 質問などありましたら、slack などでお声がけ下さい。
+- [Azure Web Apps へのデプロイ](deploy.md)
 
-#### Windows 
+## レポジトリの構成
 
-1. このレポジトリを `git clone` もしくは download
-    ```bash
-    git clone git@github.com:shinseitaro/FastAPI-Handson.git
-    ```
-    download: https://github.com/shinseitaro/FastAPI-Handson/archive/refs/heads/main.zip > 展開
-1. `FastAPI-Handson` レポジトリへ移動
-    ```bash
-    cd /path/to/FastAPI-Handson
-    ```
-1.  仮想環境構築
-    ```bash
-    # 現在有効な python を確認。
-    # 一行目に表示されるPythonが現在有効なPython
-    where python
-
-    # python のバージョン確認。Python 3.6 ~ 3.9 であることを確認。
-    python --version 
-
-    # 仮想環境構築
-    python -m venv .venv
-
-    # アクティベート
-    # 環境によっては、バックスラッシュではなく￥マークのことも有ります        
-    .venv\Scripts\activate 
-    
-
-    # 仮想環境にはいったことを確認。
-    # 最初に where python した時のパスではなく、
-    # FastAPI-Handson配下の仮想環境内にあるPythonが一行目に表示されていればOK
-    where python
-    ```
-    
-#### Mac / Linux 
-1. このレポジトリを git clone もしくは download
-    ```bash
-    git clone git@github.com:shinseitaro/FastAPI-Handson.git
-    ```
-    download: https://github.com/shinseitaro/FastAPI-Handson/archive/refs/heads/main.zip > 展開
-1. `FastAPI-Handson` レポジトリへ移動
-    ```bash
-    cd /path/to/FastAPI-Handson
-    ```
-1.  仮想環境構築
-    ```bash
-    # 現在有効な python を確認。
-    which python
-
-    # Python 3.6 ~ 3.9 であることを確認。
-    python --version 
-
-    # 仮想環境構築 
-    python -m venv .venv
-
-    # アクティベート
-    source .venv/bin/activate
-
-    # 仮想環境にはいったことを確認. 最初に which python した時のパスではなく、
-    # FastAPI-Handson配下の仮想環境内にあるPythonが表示されていればOK
-    which python
-    ```
+```bash
+.
+├── README.md
+├── api # FastAPI でAPI構築
+├── data
+├── db.sqlite3
+├── democat # ClojureScript でフロントエンド構築 
+├── deploy.md
+├── environment.md 
+├── first_step # はじめての FastAPI スクリプト
+├── learning_center # FastAPI を使うための学習ノートブック
+├── main.py
+├── requirements.txt
+└── startup.txt
+``` 

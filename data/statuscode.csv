@@ -4,4 +4,3 @@ code,message
 300,Multiple Choices
 400,Bad Request
 404,Not Found
-500,Internal Server Error

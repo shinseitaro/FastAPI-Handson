@@ -28,7 +28,7 @@
 1. 開発サーバを起動
     - その1
         ```bash
-        uvicorn main:app --reload
+        uvicorn first_step.main:app --reload
         ```
         - uvicorn : 非同期対応の Python Web サーバー、フレームワーク、およびアプリケーション間の標準インターフェースを提供
         
@@ -37,6 +37,10 @@
         if __name__ == "__main__":
             import uvicorn
             uvicorn.run(app, host="0.0.0.0", port=8000)
+        ```
+        ```bash
+        cd first_step
+        python main.py
         ```
 
 ### パスパラメータ
