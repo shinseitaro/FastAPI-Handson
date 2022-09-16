@@ -38,9 +38,9 @@
     python -m venv .venv
 
     # アクティベート cmd.exe の場合
-    .venv\Scripts\activate 
+    venv\Scripts\activate 
     # アクティベート PowerShell の場合
-    .venv\Scripts\Activate.ps1
+    venv\Scripts\Activate.ps1
    
 
     # 仮想環境にはいったことを確認。

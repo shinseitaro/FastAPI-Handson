@@ -10,6 +10,10 @@
 
 - [Azure Web Apps へのデプロイ](deploy.md)
 
+## 最初のステップ 
+
+- [最初のステップ](first_step/README.md)
+
 ## レポジトリの構成
 
 ```bash
@@ -27,3 +31,13 @@
 ├── requirements.txt
 └── startup.txt
 ``` 
+
+## 前回の復習
+
+### 2022/07/30(土)の復習
+1. FastAPI とは
+1. 環境構築
+1. FastAPI はじめのいっぽ
+    - [RapidAPI Client](https://marketplace.visualstudio.com/items?itemName=RapidAPI.vscode-rapidapi-client)
+1. FastAPI を支えるライブラリの説明
+    - sqlalchemy
